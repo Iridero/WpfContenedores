@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfContenedores.WndBordes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfContenedores"
+        mc:Ignorable="d" Loaded="Window_Loaded"
+        Title="WndBordes" Height="450" Width="450">
+    <UniformGrid Rows="4" Columns="2">
+        <Border Width="100" Height="100" Background="Aqua" Name="borde1" 
+                BorderBrush="Black" BorderThickness="{Binding ElementName=grosor,Path=Value}"/>
+        <StackPanel>
+            <ComboBox Name="colorBorde" SelectedIndex="0" />
+            <Slider x:Name="grosor" Minimum="0.5" Maximum="8" 
+                    />
+        </StackPanel>
+        <Border x:Name="borde2" BorderBrush="Black" 
+                CornerRadius="{Binding ElementName=radio, Path=val}"
+                Width="100" Height="100" BorderThickness="1" />
+        <Slider x:Name="radio" Minimum="0" Maximum="50" />
+        <Border x:Name="borde3" Width="100" Height="100" 
+                BorderBrush="Pink" BorderThickness="8"
+                CornerRadius="50 50 0 0"
+                >
+           
+        </Border>
+    </UniformGrid>
+</Window>

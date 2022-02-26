@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfContenedores.WdnEjemploScrollViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfContenedores"
+        mc:Ignorable="d"
+        Title="WdnEjemploScrollViewer" Height="200" Width="300">
+    <DockPanel>
+        <Button Content="Agregar" DockPanel.Dock="Top" x:Name="btnAgregar" Click="btnAgregar_Click" />
+        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden" >
+            <StackPanel Name="staquito" Orientation="Horizontal"/>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
